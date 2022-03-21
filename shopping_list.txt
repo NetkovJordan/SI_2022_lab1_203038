@@ -1,5 +1,5 @@
-1.Milk
-2.Ketchup
-3.Soda
-4.Bread
-5.Butter
+1.Milk x 1
+2.Ketchup x 2
+3.Soda x 3
+4.Bread x 4
+5.Butter x 5
