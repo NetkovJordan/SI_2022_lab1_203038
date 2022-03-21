@@ -1,0 +1,180 @@
+Прва лабораториска вежба по Софтверско Инженерство
+
+Јордан Нетков, група 9 ПИТ - 203038
+
+1. Имам профил
+2.Главната гранка ми е именувана master
+3.Репозиториумот ми е именуван SI_2022_lab1_203038
+4.
+mkdir SI_2022_lab1_203038
+cd SI_2022_lab1_203038
+git init
+git remote add origin https://github.com/NetkovJordan/SI_2022_lab1_203038.git
+ git clone https://github.com/NetkovJordan/SI_2022_lab1_203038.git
+cd SI_2022_lab1_203038
+
+5.
+
+touch shopping_list.txt
+nano shopping_list.txt
+ls
+git add shopping_list.txt
+git commit -m "Add 5 items to the shopping list"
+
+6.nano shopping_list.txt
+git status
+git add shopping_list.txt
+git commit -m "Add quantities to the items"
+
+7.git checkout -b branch1 
+git checkout -b branch2
+
+8.
+git log
+commit 90620011e1d730132e017a8737f9b34ed1c49a8f (HEAD -> branch2, master, branch1)
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:25:31 2022 +0100
+
+    Add quantities to the items
+
+commit 756572249543457cf5f1ac26a1a9dd69c7d3e9c2
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:24:47 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 586d629e5f20d346a97679288d7d9f1762fcd587 (origin/master, origin/HEAD)
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:22:01 2022 +0100
+
+    Initial commit
+9. 
+git push --set-upstream origin branch2
+git checkout branch1
+git push --set-upstream origin branch1
+git checkout master
+git push
+
+
+10.git checkout branch1
+
+11.nano shopping_list.txt
+git status
+git add shopping_list.txt
+git commit -m "Change quantity of item #5"
+
+
+12.git checkout master
+13.
+nano shopping_list.txt
+git status
+git add shopping_list.txt
+git commit -m "Change quantity of item #2"
+
+14.
+git push origin master
+git checkout branch1
+git push
+
+15.git checkout branch2
+
+16.
+nano shopping_list.txt
+git status
+git add shopping_list.txt
+git commit -m "Modify item #4"
+
+17.
+git log
+commit f948169e538299c52dc7764088de092529470298 (HEAD -> branch2)
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:30:09 2022 +0100
+
+    Modify item #4
+
+commit 90620011e1d730132e017a8737f9b34ed1c49a8f (origin/branch2)
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:25:31 2022 +0100
+
+    Add quantities to the items
+
+commit 756572249543457cf5f1ac26a1a9dd69c7d3e9c2
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:24:47 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 586d629e5f20d346a97679288d7d9f1762fcd587
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:22:01 2022 +0100
+
+    Initial commit
+
+
+18.
+nano shopping_list.txt
+git status
+git commit --amend
+
+
+19.
+git log
+commit aefb8a4b2aa6b1e5f837b9f321f599cf789e2bc2 (HEAD -> branch2)
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:30:09 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit 90620011e1d730132e017a8737f9b34ed1c49a8f (origin/branch2)
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:25:31 2022 +0100
+
+    Add quantities to the items
+
+commit 756572249543457cf5f1ac26a1a9dd69c7d3e9c2
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:24:47 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit 586d629e5f20d346a97679288d7d9f1762fcd587
+Author: NetkovJordan <100224466+NetkovJordan@users.noreply.github.com>
+Date:   Mon Mar 21 01:22:01 2022 +0100
+
+    Initial commit
+
+
+20.
+git add shopping_list.txt
+git commit -m "Modify item #4 and add item #6"
+git rebase -i HEAD~2
+git push
+(Pravam squash i dvata commits sto mi se identical
+gi pravam vo 1 za pocist log, neznaev kako da go sredam
+na drug nacin :( )
+git checkout master
+git merge branch1
+
+21.git merge branch2
+Овде јавува проблем:
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Проблемот е во тоа што ставките на shopping_list.txt не се исти
+различни се кај двете гранки и конфликтот може
+да се реши на 2 начини.
+
+Јас го решавам со тоа што го изменувам shopping_list.txt
+според master и правам:
+
+git add shopping_list.txt
+git commit -m "Merge branch 'branch2'"
+
+22. touch 203038.txt
+nano 203038.txt
+ls
+git add 203038.txt
+git commit -m "Add docs"
+
+23.git push
