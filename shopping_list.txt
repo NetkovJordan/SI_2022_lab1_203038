@@ -2,4 +2,4 @@
 2.Ketchup x 10
 3.Soda x 3
 4.Bread x 4
-5.Butter x 5
+5.Butter x 6
